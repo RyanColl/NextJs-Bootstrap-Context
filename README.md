@@ -24,6 +24,20 @@ function AppContext({children}) {
 }
 ```
 
+Finally, to use the store inside of a component, import the provider into the page you wish to use the store.
+```js
+import { AppProvider } from '../context/AppContext'
+```
+
+Then place the provider into React's useContext. We access state and dispatch, the two variables declared in the provider that wraps the app.
+```js
+const {state, dispatch} = React.useContext(AppProvider)
+```
+
+We see state contains `data: []`, and dispatch is how we update it.
+```js
+```
+
 ## Preview
 
 Preview the example live on [StackBlitz](http://stackblitz.com/):
