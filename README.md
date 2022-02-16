@@ -45,9 +45,11 @@ Finally we can update the data with a button.
 <button onClick={() => {changeData(['new data'])}}>Click</button>
 ```
 
-And display it with h1 tag.
+And display it by mapping the data array, and displaying h1 tag.
 ```js
-<h1>{data}</h1>
+{data.map((string, i) => {
+    return <h1>{string}</h1>
+})}
 ```
 
 
