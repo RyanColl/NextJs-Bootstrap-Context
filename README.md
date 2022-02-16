@@ -36,7 +36,20 @@ const {state, dispatch} = React.useContext(AppProvider)
 
 We see state contains `data: []`, and dispatch is how we update it.
 ```js
+const {data} = state; // declare data into a variable
+const changeData = (data) => dispatch({...state, data}) // change state
 ```
+
+Finally we can update the data with a button.
+```js
+<button onClick={() => {changeData(['new data'])}}>Click</button>
+```
+
+And display it with h1 tag.
+```js
+<h1>{data}</h1>
+```
+
 
 ## Preview
 
