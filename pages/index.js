@@ -1,7 +1,9 @@
 import Link from 'next/link'
-
+import { AppProvider } from '../context/AppContext' // import app provider
 const IndexPage = () => {
-  
+  const {state, dispatch} = React.useContext(AppProvider) // access context
+  const {data} = state; // see data
+  const changeData = (data) => dispatch({...state, data}) // change state
   return (
     <>
       <h1 className='text-info'>HOME</h1>
