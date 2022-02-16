@@ -1,15 +1,12 @@
-import App from 'next/app'
-import { CounterProvider } from '../components/Counter'
+import AppContext from '../context/AppContext'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
+function MyApp({ Component, pageProps }) {
     return (
-      <CounterProvider>
+      <AppContext>
         <Component {...pageProps} />
-      </CounterProvider>
+      </AppContext>
     )
-  }
 }
 
 export default MyApp

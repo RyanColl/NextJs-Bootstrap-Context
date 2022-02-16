@@ -1,30 +1,16 @@
 import Link from 'next/link'
-import { useCount, useDispatchCount } from '../components/Counter'
 
 const IndexPage = () => {
-  const count = useCount()
-  const dispatch = useDispatchCount()
-
-  const handleIncrease = (event) =>
-    dispatch({
-      type: 'INCREASE',
-    })
-  const handleDecrease = (event) =>
-    dispatch({
-      type: 'DECREASE',
-    })
-
+  
   return (
     <>
-      <h1>HOME</h1>
-      <p>Counter: {count}</p>
-      <button onClick={handleIncrease}>Increase</button>
-      <button onClick={handleDecrease}>Decrease</button>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+      <h1 className='text-info'>HOME</h1>
+      <h1 className='text-warning'>Welcome to NextJs with <b className='text-success'>Context</b> and <b className='text-primary'>Bootstrap</b></h1>
+      <button className='btn btn-primary'>Button</button>
+      <button className='btn btn-success'>Button</button>
+      <button className='btn btn-warning'>Button</button>
+      <button className='btn btn-danger'>Button</button>
+      <button className='btn btn-info'>Button</button>
     </>
   )
 }
